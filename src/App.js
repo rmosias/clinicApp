@@ -7,6 +7,7 @@ import './App.css';
 // Componentes
 import Dashboard from './components/dashboard/Dashboard'
 import Navbar from './components/layout/Navbar'
+import ListPacients from './components/pacient/ListPacients'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path='/' component={Dashboard} />
+            <Route exact path='/pacient' component={ListPacients} />
           </Switch>
         </div>
       </BrowserRouter>
