@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 // css pra estilizar component
 import './layout.css'
 
-
 export default function Navbar() {
   return (
     <div className="container-fluid clinicNav">
