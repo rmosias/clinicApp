@@ -9,7 +9,6 @@ const CreatePacient = () => {
         <div className="card">
             <h5 className="text-left card-header">Cadastro de pacientes</h5>
               <div className="text-left  card-body">
-                  
                   <a href="#" className="btn btn-primary">Cadastrar</a>
               </div>
         </div>
