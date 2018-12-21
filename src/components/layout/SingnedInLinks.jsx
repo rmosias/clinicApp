@@ -1,7 +1,9 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {signOut} from '../../store/actions/authActions'
 
-const SingnedInLinks = () => {
+const SingnedInLinks = (props) => {
   return (
     <ul className="nav justify-content-end">
       <li className="nav-item ">
@@ -15,10 +17,15 @@ const SingnedInLinks = () => {
       </li>
 
       <li className="nav-item">
-        <a className="nav-link text-light" href="#">Sair</a>
+        <a onClick={props.signOut} className="nav-link text-light" href="#">Sair</a>
       </li>
     </ul>
   )
 }
 
-export default SingnedInLinks
+const mapDispatchToProps = (dispatch) => {
+  return{
+      signOut: () => dispatch(signOut())
+  }
+}
+export default connect(null,mapDispatchToProps)(SingnedInLinks)
