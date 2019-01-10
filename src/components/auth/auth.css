@@ -80,3 +80,18 @@
 .form {
     margin-left: 145px;
 }
+
+.register-box{
+    background: gray;
+    padding: 30%;
+}
+
+.register {
+    background: red;
+    width: 100%;
+}
+
+.banner {
+    background: green;
+    width: 100%;
+}
