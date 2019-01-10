@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Redirect } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {signIn} from '../../store/actions/authActions'
 
@@ -8,7 +9,8 @@ import './auth.css'
 class SingIn extends Component {
     state = {
         email: '',
-        password: ''
+        password: '',
+        redirect: false
     }
     handleChange = (e) => {
         this.setState({
@@ -17,7 +19,6 @@ class SingIn extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
         this.props.signIn(this.state);
     }
    render() {
